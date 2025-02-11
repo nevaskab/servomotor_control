@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "author": "Andressa Martins",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-pi-pico-w", "id": "pico", "top": -80.05, "left": -188.45, "attrs": {} },
+      { "type": "wokwi-servo", "id": "servo1", "top": -50, "left": 28.8, "attrs": {} }
+    ],
+    "connections": [
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "servo1:GND", "pico:GND.8", "black", [ "v-48", "h-144.31" ] ],
+      [ "servo1:V+", "pico:3V3", "red", [ "v0.1", "h-124.8", "v-38.4" ] ],
+      [ "servo1:PWM", "pico:GP22", "blue", [ "v19.4", "h-144.31" ] ]
+    ],
+    "dependencies": {}
+}
