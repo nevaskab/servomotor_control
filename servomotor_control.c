@@ -53,24 +53,23 @@ void move_smoothly(uint gpio, float pulso_inicial, float pulso_final, int step, 
 int main() {
     init_all_pins();
 
-    //0°
-    set_servo_angle(SERVO_PIN, PULSO_ANGULO_0);
+    //180°
+    set_servo_angle(SERVO_PIN, PULSO_ANGULO_180);
     sleep_ms(5000);
 
     //90°
     set_servo_angle(SERVO_PIN, PULSO_ANGULO_90);
     sleep_ms(5000);
 
-    //180°
-    set_servo_angle(SERVO_PIN, PULSO_ANGULO_180);
+    //0°
+    set_servo_angle(SERVO_PIN, PULSO_ANGULO_0);
     sleep_ms(5000);
 
     while (true) {
+        //sai de 0° para 180° suavemente
+        move_smoothly(SERVO_PIN, PULSO_ANGULO_0, PULSO_ANGULO_180, SMOOTH_MOVE_STEP, SMOOTH_MOVE_DELAY);
 
         //sai de 180° para 0 suavemente
         move_smoothly(SERVO_PIN, PULSO_ANGULO_180, PULSO_ANGULO_0, SMOOTH_MOVE_STEP, SMOOTH_MOVE_DELAY);
-
-        //sai de 0° para 180° suavemente
-        move_smoothly(SERVO_PIN, PULSO_ANGULO_0, PULSO_ANGULO_180, SMOOTH_MOVE_STEP, SMOOTH_MOVE_DELAY);
     }
 }
