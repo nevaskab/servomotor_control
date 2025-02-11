@@ -48,7 +48,7 @@ Siga as etapas a seguir:
 ---
 
 <h2>Para mais detalhe sobre o funcionamento...</h2>
-Visite: 
+Visite: https://drive.google.com/file/d/1jteAYrG5ga5Q9dX57NgvaTK155hPvS6_/view?usp=sharing
 
 ### Autor
 ---
